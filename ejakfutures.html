@@ -6,7 +6,7 @@
           fetch("https://www.binance.com/fapi/v1/exchangeInfo")
             .then((response) => response.json())
             .then(({symbols}) => {
-              const data = symbols.map(({ symbol }) => `${symbol}PERP`);
+              const data = symbols.map(({ symbol }) => `${symbol}PERPi`);
               res(data);
             });
         });
