@@ -31,9 +31,14 @@
         return response.json();
       }
 
-      postData('https://www.tradingview.com/api/v1/symbols_list/colored/red/append/', ['${list.join(
-          //"','"
-        )}'])
+      //postData('https://www.tradingview.com/api/v1/symbols_list/colored/red/append/', ['${list.join(
+       //   "','"
+        //)}'])
+        
+        postData('https://www.tradingview.com/api/v1/symbols_list/colored/red/append/', ["BINANCE:"${list.join(
+          "','"
+        )}])
+          
         .then(data => {
           console.log(data);
         }); // HI from AGT - created time: ${new Date()}
